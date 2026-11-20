@@ -19,5 +19,13 @@ public class BankSolid {
         System.out.println();
         LaporanBank.cetakDaftar("REKENING AKHIR", semua);
         LaporanBank.cetakTotal(semua);
+
+
+// Langkah 7 (LSP): saat Deposito.tarik melempar exception, program berhenti dengan:
+// Exception in thread "main" java.lang.UnsupportedOperationException: Deposito tidak bisa ditarik
+//     at Deposito.tarik(Deposito.java:23)
+//     at ProsesAkhirBulan.autodebet(ProsesAkhirBulan.java:19)
+// Penyebab: Deposito melanggar kontrak Rekening.tarik (harusnya mengembalikan false).
+// Sudah diperbaiki: Deposito.tarik sekarang mengembalikan false.
     }
-}
+            }
