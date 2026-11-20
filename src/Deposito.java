@@ -20,10 +20,8 @@ public class Deposito extends Rekening implements BerBunga {
 
     @Override
     public boolean tarik(int jumlah) {
-        // Belum jatuh tempo: tolak dengan false sesuai kontrak Rekening.tarik.
         return false;
     }
-
     @Override
     public String keterangan() {
         return "Deposito, bunga " + bungaPersen + "% per bulan";
